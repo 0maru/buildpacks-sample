@@ -3,15 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "16.19.1",
-    "pnpm": "7.17.0"
+    "node": "16.19.1"
   },
-  "packageManager": "pnpm@7.17.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gcp-build": "next build"
   },
   "dependencies": {
     "@types/node": "18.14.1",
