@@ -12,10 +12,19 @@ brew install buildpacks/tap/pack
 
 ### ローカルでビルド
 
-デフォルトではbuild を行わないので、ビルドするようオプションを追加する
+#### Next
+Next.js のビルドのときに`npm run build` は実行されないので、package.json のscript に`"gcp-build": "next build"` を追加する必要がある
+
 ```
-pack build --builder=gcr.io/buildpacks/builder nextjs
+pack build --builder=gcr.io/buildpacks/builder --path ./node/node-16-nextjs-13 nextjs
 ```
+
+#### Go
+
+```
+pack build --builder=gcr.io/buildpacks/builder --path ./go/server go-server
+```
+
 
 ### ローカルで起動
 
